@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500&display=swap');
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    body {
+      background-attachment: fixed;
+      background-size: 100% auto;
+      background-repeat: no-repeat;
+      background-color: #E0E8FF;
+    }
+
+    .card__banner {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 20px 20px 0 0;
+    }
+
+    .card {
+        /* Change background color */
+        background-color: white;
+        border-radius: 20px;
+        width: 450px;
+        height: 697px;
+    }
+
+    .card__details {
+          width: 80%;
+          /* Center the container in middle on horizontal axis */
+          margin: 0 auto;
+    }
+
+    .card__textElement {
+      text-align: center;
+    }
+
+    .card_blockElement{
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .card__title {
+      color: #1F2E55;
+      font-family: "Red Hat Display";
+      font-size: 28px;
+    }
+
+    .card__description{
+      color: #717FA6;
+    }
+
+    .order {
+      background-color: #F7F9FF;
+      border-radius: 11px;
+      padding: 20px;
+    }
+
+    .order__summary {
+      display:inline-block;
+      padding-left: 20px;
+    }
+
+    .order__plantext{
+      font-weight: bold;
+      font-family: "Red Hat Display";
+    }
+
+    .order__change {
+      color: #382AE1;
+      padding-left:   60px;
+      font-weight: bold;
+      font-family: "Red Hat Display";
+      cursor: pointer;
+    }
+
+    .payment {
+      background-color: #382AE1;
+      color: white;
+      border-radius: 11px;
+      border: none;
+      display:block;
+      filter: drop-shadow(0 20px 15px #c5c2e4);
+      margin-top: 20px;
+      padding: 20px;
+      text-align: center;
+      width: 354px;
+      font-size: 15px;
+      font-family: "Red Hat Display";
+      cursor: pointer;
+    }
+
+    .cancel {
+      color: #717FA6;
+      margin-top: 30px;
+      display:block;
+      text-align: center;
+      font-size: 15px;
+      font-family: "Red Hat Display";
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    @media only screen and (max-width: 600px) {
+      body {
+        background-image: url("images/pattern-background-mobile.svg");
+        background-size: 639.27px 194px;
+        background-position-x : -131.81px;
+      }
+    }
+
+
+    @media only screen and (min-width: 600px) {
+      body {
+        background-image: url("images/pattern-background-desktop.svg");
+      }
+      #container {
+          max-width: 450px;
+          /* Center the container in middle on horizontal axis */
+          margin: 0 auto;
+          /* Add empty space above the container (20% of the view height) */
+          margin-top: 20vh;
+        }
+
+        .card__banner {
+          width: 100%;
+          height: 220;
+        }
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <div class="card">
+      <img class="card__banner" src="images/illustration-hero.svg" alt="illustration-hero">
+      <div class="card__details">
+        <h1 class="card__textElement card__title">Order Summary</h4>
+        <p class="card__textElement card__description">
+            You can now listen to millions of songs,<br> audiobooks, and podcasts on any
+          device <br> anywhere you like!
+        </p>
+        <div class="card__blockElement order">
+          <img src="images/icon-music.svg" alt="icon-music">
+          <p class="order__summary">
+            <span class="order__plantext">Annual Plan</span>
+            <br>
+            $59.99/year
+          </p>
+          <a href="#" class="order__change">Change</a>
+        </div>
+        <button class="payment">
+          Proceed to Payment
+        </button>
+        <a class="cancel">Cancel Order</a>
+    </div>
+  </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Justin Barnes</a>.
+  </div>
+</body>
+</html>
